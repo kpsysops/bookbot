@@ -1,15 +1,11 @@
+from stats import count_words
+
 def main():
     book_content = grab_a_book("books/frankenstein.txt")
     words = count_words(book_content)
     characters = count_characters(book_content)
     #print(characters.items())
     raport(words,characters)
-
-
-def count_words(book_content):
-    words = book_content.split()
-    return len(words) 
-
 
 def count_characters(book_content):
     chars = {}
